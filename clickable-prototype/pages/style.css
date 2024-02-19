@@ -46,10 +46,15 @@
 }
 
 .card-active {
-    border: 5px solid #9ab87a;
+    outline: 5px solid #9ab87a;
 }
 
-/* local styles */ 
+.checked {
+    color: orange;
+}
+
+
+/* local styles - product page */ 
 
 .card-categories {
     width: 150px;
