@@ -60,4 +60,16 @@
     width: 150px;
 }
 
+/* local styles - specific item page */ 
+
+.main-image {
+
+    height: 480px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
 
