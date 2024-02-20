@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Page</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script>
+            src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js";
+            integrity = "sha384-h721eN0C7a0eQv9z9gCv8v8R6p6tX0GKmZCg3f4zOqLYxdJ3hI4Uv5f+JzOqm9my6";
+            crossorigin = "anonymous";
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="../pages/assets/css/style.css" />
+        <script>
+            $(document).ready(function () {
+                // Add hover effect to categories
+                $(".card-categories").hover(
+                    function () {
+                        $(this).addClass("hover-effect");
+                    },
+                    function () {
+                        $(this).removeClass("hover-effect");
+                    }
+                );
+                // Add hover effect to products
+                $(".card-products").hover(
+                    function () {
+                        $(this).addClass("card-active hover-effect");
+                    },
+                    function () {
+                        $(this).removeClass("card-active hover-effect");
+                    }
+                );
+                // Hide header on scroll down
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 50) {
+                        $("#header").addClass("d-none");
+                        $("#search-bar-brand").addClass("d-sm-block");
+                        $("#search-bar").addClass("pt-3");
+                    } else {
+                        $("#header").removeClass("d-none");
+                        $("#search-bar-brand").removeClass("d-sm-block");
+                        $("#search-bar").removeClass("pt-3");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="navbar-dark main-color sticky-top">
+            <div class="container">
+                <div
+                    class="row py-3 d-flex align-items-center text-center text-md-start"
+                    id="header"
+                >
+                    <div class="col-sm-12 col-md-6">
+                        <a class="navbar-brand sofia-regular" href="product-page.html">
+                            <img
+                                src="../pages/assets/images/leaf.png"
+                                alt="Logo"
+                                width="30"
+                                height="24"
+                                class="d-inline-block align-text-center"
+                            />
+                            Garden Grove Co
+                        </a>
+                    </div>
+                    <div class="d-none d-md-block col-md-6 justify-self-end text-end">
+                        <span class="roboto-thin text-white">
+                            Where Every Garden Finds Its Grove
+                        </span>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-12">
+                        <form class="d-flex align-items-center" id="search-bar">
+                            <img
+                                src="../pages/assets/images/leaf.png"
+                                alt=""
+                                class="me-2 d-none"
+                                id="search-bar-brand"
+                            />
+                            <input
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+                            <input class="btn btn-secondary me-2" type="submit" value="Search" />
+                            <a
+                                type="button"
+                                class="btn btn-secondary position-relative me-2 search-bar-image"
+                                href="user-profile.html"
+                            >
+                                <img src="../pages/assets/images/avatar.png" alt="" />
+                            </a>
+                            <a
+                                type="button"
+                                class="btn btn-secondary position-relative search-bar-image"
+                                href="cart.html"
+                            >
+                                <img src="../pages/assets/images/shopping-cart.png" alt="" />
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none d-sm-block"
+                                >
+                                    99+
+                                    <span class="visually-hidden">Item Count</span>
+                                </span>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Status</h2>
+                </div>
+            </div>
+            <div
+                class="row row-cols-auto gap-5 flex-nowrap p-4 justify-content-start justify-content-lg-center overflow-auto"
+            >
+                <div class="col">
+                    <button
+                        type="button"
+                        class="btn btn-secondary position-relative card-categories"
+                        style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.5),
+                                    rgba(0, 0, 0, 0.5)
+                                ),
+                                url('../pages/assets/images/all-orders.jpg');
+                        "
+                    >
+                        All Orders
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill tertiary-color"
+                        >
+                            99+
+                            <span class="visually-hidden">Item Count</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button
+                        type="button"
+                        class="btn btn-secondary position-relative card-categories"
+                        style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.5),
+                                    rgba(0, 0, 0, 0.5)
+                                ),
+                                url('../pages/assets/images/processing.jpg');
+                        "
+                    >
+                        Pending Orders
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill tertiary-color"
+                        >
+                            99+
+                            <span class="visually-hidden">Item Count</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button
+                        type="button"
+                        class="btn btn-secondary active position-relative card-categories"
+                        style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.5),
+                                    rgba(0, 0, 0, 0.5)
+                                ),
+                                url('../pages/assets/images/processing-1.jpg');
+                        "
+                    >
+                        On Process Orders
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill tertiary-color"
+                        >
+                            99+
+                            <span class="visually-hidden">Item Count</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button
+                        type="button"
+                        class="btn btn-secondary position-relative card-categories"
+                        style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.5),
+                                    rgba(0, 0, 0, 0.5)
+                                ),
+                                url('../pages/assets/images/shipped.jpeg');
+                        "
+                    >
+                        Shipped Orders
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill tertiary-color"
+                        >
+                            99+
+                            <span class="visually-hidden">Item Count</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button
+                        type="button"
+                        class="btn btn-secondary position-relative card-categories"
+                        style="
+                            background-image: linear-gradient(
+                                    rgba(0, 0, 0, 0.5),
+                                    rgba(0, 0, 0, 0.5)
+                                ),
+                                url('../pages/assets/images/orders.jpg');
+                        "
+                    >
+                        Delivered Orders
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill tertiary-color"
+                        >
+                            99+
+                            <span class="visually-hidden">Item Count</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3 table-responsive-md">
+            <table
+                class="table table-striped text-center table-borderless align-items-center align-middle"
+            >
+                <thead class="main-color text-light">
+                    <tr>
+                        <th scope="col">Order Count</th>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Receiver</th>
+                        <th scope="col">Total Amount</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="roboto-regular">
+                    <tr>
+                        <td>10 Items</td>
+                        <td>123456</td>
+                        <td class="roboto-light">01/01/2021</td>
+                        <td>
+                            <p class="m-0">John Doe</p>
+                            <span class="address">45345345DFGDFGDFG56</span>
+                        </td>
+                        <td>$999.99</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Pending</button>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10 Items</td>
+                        <td>123456</td>
+                        <td class="roboto-light">01/01/2021</td>
+                        <td>
+                            <p class="m-0">John Doe</p>
+                            <span class="address">45345345DFGDFGDFG56</span>
+                        </td>
+                        <td>$999.99</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Pending</button>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10 Items</td>
+                        <td>123456</td>
+                        <td class="roboto-light">01/01/2021</td>
+                        <td>
+                            <p class="m-0">John Doe</p>
+                            <span class="address">45345345DFGDFGDFG56</span>
+                        </td>
+                        <td>$999.99</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Pending</button>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10 Items</td>
+                        <td>123456</td>
+                        <td class="roboto-light">01/01/2021</td>
+                        <td>
+                            <p class="m-0">John Doe</p>
+                            <span class="address">45345345DFGDFGDFG56</span>
+                        </td>
+                        <td>$999.99</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Pending</button>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10 Items</td>
+                        <td>123456</td>
+                        <td class="roboto-light">01/01/2021</td>
+                        <td>
+                            <p class="m-0">John Doe</p>
+                            <span class="address">45345345DFGDFGDFG56</span>
+                        </td>
+                        <td>$999.99</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Pending</button>
+                                <button
+                                    type="button"
+                                    class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container mt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -113,7 +113,7 @@
 
 .btn-primary:focus {
     background-color: var(--bs-primary);
-    outline: 5px solid var(--bs-secondary); 
+    outline: 5px solid var(--bs-secondary);
 }
 
 .btn-primary:hover {
@@ -146,6 +146,36 @@
     background-color: var(--bs-primary);
     outline: 5px solid var(--bs-secondary);
     border: 0;
+}
+
+.btn-tertiary {
+    background-color: var(--bs-tertiary);
+    border-color: var(--bs-tertiary);
+    color: white;
+}
+
+.btn-tertiary:focus {
+    background-color: var(--bs-tertiary);
+    outline: 5px solid var(--bs-tertiary);
+    border: 0;
+}
+
+.btn-tertiary:hover {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+    color: white;
+}
+
+.btn-tertiary.active {
+    background-color: var(--bs-primary);
+    border: 0;
+    outline: 0;
+}
+
+.btn-tertiary.active:focus {
+    background-color: var(--bs-primary);
+    border: 0;
+    outline: 0;
 }
 
 .pagination .page-link {
@@ -270,4 +300,15 @@ label.form-check-label:focus,
 /* local styles - user profile */
 .user-profile-container {
     min-height: 700px;
+}
+
+/* local styles - admin-order-dashboard */
+.order-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.address {
+    font-size: 0.8em;
 }
