@@ -269,7 +269,5 @@ label.form-check-label:focus,
 
 /* local styles - user profile */
 .user-profile-container {
-    max-height: 600px;
-    width: 100%;
-    object-fit: cover;
+    min-height: 700px;
 }
