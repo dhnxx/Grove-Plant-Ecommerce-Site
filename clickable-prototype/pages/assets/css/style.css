@@ -85,7 +85,7 @@
 :root {
     --bs-primary: #4b543b;
     --bs-secondary: #9ab87a;
-    --bs-tertiary: #E88604;
+    --bs-tertiary: #e88604;
     --bs-dark: #1c1018;
     --bs-light: #ebcea5;
 }
@@ -180,7 +180,7 @@
 }
 
 .checked {
-    color : var(--bs-tertiary);
+    color: var(--bs-tertiary);
 }
 
 .form-check-input:checked {
@@ -248,6 +248,16 @@ label.form-check-label:focus,
     height: 480px;
     width: 100%;
     object-fit: cover;
+}
+
+.specific-item-container {
+    max-height: 675px;
+    object-fit: cover;
+}
+
+.specific-item-container .description {
+    max-height: 320px;
+    width: 100%;
 }
 
 /* local styles - cart page */
