@@ -113,7 +113,7 @@
 
 .btn-primary:focus {
     background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
+    outline: 5px solid var(--bs-secondary); 
 }
 
 .btn-primary:hover {
@@ -127,7 +127,7 @@
 }
 
 .btn-secondary:focus {
-    background-color: var(--bs-primary);
+    background-color: var(--bs-tertiary);
     outline: 5px solid var(--bs-tertiary);
     border: 0;
 }
@@ -221,7 +221,7 @@ label.form-check-label:focus,
 }
 
 .card-categories span {
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .card-categories img {

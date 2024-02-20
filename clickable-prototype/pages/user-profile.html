@@ -131,253 +131,269 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <a href="product-page.html" class="btn btn-primary mt-3"
-                        >Back to Product Page</a
-                    >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="product-page.html" class="btn btn-primary mt-3"
+                            >Back to Product Page</a
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container mt-3">
-            <div class="row g-3">
-                <div class="col-12 col-md-8 user-profile-container">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title">User Information</h5>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="form-check form-switch d-flex justify-content-end">
-                                        <input
-                                            class="form-check-input me-1"
-                                            type="checkbox"
-                                            id="edit-information-switch"
-                                        />
-                                        <label
-                                            class="form-check-label"
-                                            for="edit-information-switch"
-                                            >Edit</label
+            <div class="container mt-3">
+                <div class="row g-3">
+                    <div class="col-12 col-md-8 user-profile-container">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title">User Information</h5>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div
+                                            class="form-check form-switch d-flex justify-content-end"
                                         >
+                                            <input
+                                                class="form-check-input me-1"
+                                                type="checkbox"
+                                                id="edit-information-switch"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="edit-information-switch"
+                                                >Edit</label
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-body user-input">
+                                <form action="">
+                                    <div class="mb-3 row">
+                                        <div class="col-6">
+                                            <label for="first_name" class="form-label"
+                                                >First Name</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="first_name"
+                                                placeholder="First Name"
+                                                readonly
+                                            />
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="username" class="form-label"
+                                                >Last Name</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="last_name"
+                                                placeholder="Last Name"
+                                                readonly
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            id="email"
+                                            placeholder="Email"
+                                            readonly
+                                        />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Contact Number</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="contact_number"
+                                            placeholder="Contact Number"
+                                            readonly
+                                        />
+                                    </div>
+                                    <div class="d-grid mt-3 d-none" id="save-information">
+                                        <input type="submit" class="btn btn-primary" value="Save" />
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="card-body user-input">
-                            <form action="">
-                                <div class="mb-3 row">
-                                    <div class="col-6">
-                                        <label for="first_name" class="form-label"
-                                            >First Name</label
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title">Change Password</h5>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div
+                                            class="form-check form-switch d-flex justify-content-end"
                                         >
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="first_name"
-                                            placeholder="First Name"
-                                            readonly
-                                        />
-                                    </div>
-                                    <div class="col-6">
-                                        <label for="username" class="form-label">Last Name</label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="last_name"
-                                            placeholder="Last Name"
-                                            readonly
-                                        />
+                                            <input
+                                                class="form-check-input me-1"
+                                                type="checkbox"
+                                                id="edit-password-switch"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="edit-password-switch"
+                                                >Change</label
+                                            >
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="card-body d-none" id="change-password-body">
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
+                                    <label for="password" class="form-label"
+                                        >Current Password</label
+                                    >
                                     <input
-                                        type="email"
+                                        type="password"
                                         class="form-control"
-                                        id="email"
-                                        placeholder="Email"
+                                        id="current_password"
+                                        placeholder="Current Password"
                                         readonly
                                     />
                                 </div>
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Contact Number</label>
+                                    <label for="password" class="form-label">New Password</label>
                                     <input
-                                        type="text"
+                                        type="password"
                                         class="form-control"
-                                        id="contact_number"
-                                        placeholder="Contact Number"
+                                        id="new_password"
+                                        placeholder="Password"
                                         readonly
                                     />
                                 </div>
-                                <div class="d-grid mt-3 d-none" id="save-information">
-                                    <input type="submit" class="btn btn-primary" value="Save" />
+                                <div class="mb-3" id="confirm-password-field">
+                                    <label for="confirm-password" class="form-label"
+                                        >Confirm Password</label
+                                    >
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="confirm-password"
+                                        placeholder="Confirm Password"
+                                        readonly
+                                    />
                                 </div>
-                            </form>
+                                <div class="d-grid mt-3" id="save-password">
+                                    <input
+                                        type="submit"
+                                        class="btn btn-primary"
+                                        value="Change Password"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card mt-3">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title">Change Password</h5>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="form-check form-switch d-flex justify-content-end">
-                                        <input
-                                            class="form-check-input me-1"
-                                            type="checkbox"
-                                            id="edit-password-switch"
-                                        />
-                                        <label class="form-check-label" for="edit-password-switch"
-                                            >Change</label
-                                        >
+                    <div class="col-12 col-md-4">
+                        <div class="card user-profile-container">
+                            <div class="card-header">
+                                <h5 class="card-title">Order History</h5>
+                            </div>
+                            <div class="card-body overflow-auto">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Order ID #1</h5>
+                                                <p class="card-text">Order Date: 01/01/2021</p>
+                                                <p class="card-text">Total: $100.00</p>
+                                                <div class="d-grid">
+                                                    <a href="#" class="btn btn-primary view-order"
+                                                        >View</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Order ID #1</h5>
+                                                <p class="card-text">Order Date: 01/01/2021</p>
+                                                <p class="card-text">Total: $100.00</p>
+                                                <div class="d-grid">
+                                                    <a href="#" class="btn btn-primary view-order"
+                                                        >View</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Order ID #1</h5>
+                                                <p class="card-text">Order Date: 01/01/2021</p>
+                                                <p class="card-text">Total: $100.00</p>
+                                                <div class="d-grid">
+                                                    <a href="#" class="btn btn-primary view-order"
+                                                        >View</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-body d-none" id="change-password-body">
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Current Password</label>
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="current_password"
-                                    placeholder="Current Password"
-                                    readonly
-                                />
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">New Password</label>
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="new_password"
-                                    placeholder="Password"
-                                    readonly
-                                />
-                            </div>
-                            <div class="mb-3" id="confirm-password-field">
-                                <label for="confirm-password" class="form-label"
-                                    >Confirm Password</label
-                                >
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="confirm-password"
-                                    placeholder="Confirm Password"
-                                    readonly
-                                />
-                            </div>
-                            <div class="d-grid mt-3" id="save-password">
-                                <input type="submit" class="btn btn-primary" value="Change Password" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="card user-profile-container">
-                        <div class="card-header">
-                            <h5 class="card-title">Order History</h5>
+            </div>
+            <!--Specific Order Modal-->
+            <div
+                class="modal fade"
+                id="orderViewModal"
+                tabindex="-1"
+                aria-labelledby="orderViewModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="orderViewModalLabel">Order ID #1</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
                         </div>
-                        <div class="card-body overflow-auto">
+                        <div class="modal-body">
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Order ID #1</h5>
-                                            <p class="card-text">Order Date: 01/01/2021</p>
-                                            <p class="card-text">Total: $100.00</p>
-                                            <div class="d-grid">
-                                                <a href="#" class="btn btn-primary view-order"
-                                                    >View</a
-                                                >
-                                            </div>
+                                            <h5 class="card-title">Product Name</h5>
+                                            <p class="card-text">Product Description</p>
+                                            <p class="card-text">Quantity: 1</p>
+                                            <p class="card-text">Price: $100.00</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Order ID #1</h5>
-                                            <p class="card-text">Order Date: 01/01/2021</p>
-                                            <p class="card-text">Total: $100.00</p>
-                                            <div class="d-grid">
-                                                <a href="#" class="btn btn-primary view-order"
-                                                    >View</a
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Order ID #1</h5>
-                                            <p class="card-text">Order Date: 01/01/2021</p>
-                                            <p class="card-text">Total: $100.00</p>
-                                            <div class="d-grid">
-                                                <a href="#" class="btn btn-primary view-order"
-                                                    >View</a
-                                                >
-                                            </div>
+                                            <h5 class="card-title">Product Name</h5>
+                                            <p class="card-text">Product Description</p>
+                                            <p class="card-text">Quantity: 1</p>
+                                            <p class="card-text">Price: $100.00</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!--Specific Order Modal-->
-        <div
-            class="modal fade"
-            id="orderViewModal"
-            tabindex="-1"
-            aria-labelledby="orderViewModalLabel"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="orderViewModalLabel">Order ID #1</h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
                     </div>
-                    <div class="modal-body">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Product Description</p>
-                                        <p class="card-text">Quantity: 1</p>
-                                        <p class="card-text">Price: $100.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Product Description</p>
-                                        <p class="card-text">Quantity: 1</p>
-                                        <p class="card-text">Price: $100.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Close
-                    </button>
                 </div>
             </div>
         </div>
