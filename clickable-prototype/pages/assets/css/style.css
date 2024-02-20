@@ -85,7 +85,7 @@
 :root {
     --bs-primary: #4b543b;
     --bs-secondary: #9ab87a;
-    --bs-tertiary: #E88604;
+    --bs-tertiary: #e88604;
     --bs-dark: #1c1018;
     --bs-light: #ebcea5;
 }
@@ -113,7 +113,7 @@
 
 .btn-primary:focus {
     background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
+    outline: 5px solid var(--bs-secondary);
 }
 
 .btn-primary:hover {
@@ -127,7 +127,7 @@
 }
 
 .btn-secondary:focus {
-    background-color: var(--bs-primary);
+    background-color: var(--bs-tertiary);
     outline: 5px solid var(--bs-tertiary);
     border: 0;
 }
@@ -146,6 +146,36 @@
     background-color: var(--bs-primary);
     outline: 5px solid var(--bs-secondary);
     border: 0;
+}
+
+.btn-tertiary {
+    background-color: var(--bs-tertiary);
+    border-color: var(--bs-tertiary);
+    color: white;
+}
+
+.btn-tertiary:focus {
+    background-color: var(--bs-tertiary);
+    outline: 5px solid var(--bs-tertiary);
+    border: 0;
+}
+
+.btn-tertiary:hover {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+    color: white;
+}
+
+.btn-tertiary.active {
+    background-color: var(--bs-primary);
+    border: 0;
+    outline: 0;
+}
+
+.btn-tertiary.active:focus {
+    background-color: var(--bs-primary);
+    border: 0;
+    outline: 0;
 }
 
 .pagination .page-link {
@@ -180,7 +210,7 @@
 }
 
 .checked {
-    color : var(--bs-tertiary);
+    color: var(--bs-tertiary);
 }
 
 .form-check-input:checked {
@@ -221,7 +251,7 @@ label.form-check-label:focus,
 }
 
 .card-categories span {
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .card-categories img {
@@ -250,6 +280,16 @@ label.form-check-label:focus,
     object-fit: cover;
 }
 
+.specific-item-container {
+    max-height: 675px;
+    object-fit: cover;
+}
+
+.specific-item-container .description {
+    max-height: 320px;
+    width: 100%;
+}
+
 /* local styles - cart page */
 .cart-image {
     width: 100%;
@@ -259,7 +299,16 @@ label.form-check-label:focus,
 
 /* local styles - user profile */
 .user-profile-container {
-    height: 600px;
-    width: 100%;
+    min-height: 700px;
+}
+
+/* local styles - admin-order-dashboard */
+.order-container img {
+    width: 50px;
+    height: 50px;
     object-fit: cover;
+}
+
+.address {
+    font-size: 0.8em;
 }
