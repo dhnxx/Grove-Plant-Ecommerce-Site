@@ -16,20 +16,23 @@
             crossorigin = "anonymous";
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
+        <link rel="stylesheet" href="../pages/assets/css/style.css" />
         <script>
             $(document).ready(function () {
                 // Hide header on scroll down
                 $(window).scroll(function () {
-                    if ($(this).scrollTop() > 5) {
+                    if ($(this).scrollTop() > 1) {
                         $("#header").addClass("d-none");
+                        $("#search-bar-brand").addClass("d-sm-block");
                         $("#search-bar").addClass("pt-3");
                     } else {
                         $("#header").removeClass("d-none");
+                        $("#search-bar-brand").removeClass("d-sm-block");
                         $("#search-bar").removeClass("pt-3");
                     }
                 });
@@ -47,37 +50,64 @@
     <body>
         <div class="navbar-dark main-color sticky-top">
             <div class="container">
-                <div class="row py-3 d-flex align-items-center" id="header">
-                    <div class="col">
-                        <a class="navbar-brand d-flex align-items-center" href="#">
+                <div
+                    class="row py-3 d-flex align-items-center text-center text-md-start"
+                    id="header"
+                >
+                    <div class="col-sm-12 col-md-6">
+                        <a class="navbar-brand sofia-regular" href="product-page.html">
                             <img
-                                src="https://placehold.co/100x100"
+                                src="../pages/assets/images/leaf.png"
                                 alt="Logo"
                                 width="30"
                                 height="24"
-                                class="d-inline-block align-text-center me-2"
+                                class="d-inline-block align-text-center"
                             />
-                            Garden Grove Co.
+                            Garden Grove Co
                         </a>
                     </div>
-                    <div class="col-auto">
-                        <div>
-                            <a class="nav-link active text-light" aria-current="page" href="#"
-                                >Profile</a
-                            >
-                        </div>
+                    <div class="d-none d-md-block col-md-6 justify-self-end text-end">
+                        <span class="roboto-thin text-white">
+                            Where Every Garden Finds Its Grove
+                        </span>
                     </div>
                 </div>
                 <div class="row pb-3">
                     <div class="col-12">
-                        <form class="d-flex" id="search-bar">
+                        <form class="d-flex align-items-center" id="search-bar">
+                            <img
+                                src="../pages/assets/images/leaf.png"
+                                alt=""
+                                class="me-2 d-none"
+                                id="search-bar-brand"
+                            />
                             <input
                                 class="form-control me-2"
                                 type="search"
                                 placeholder="Search"
                                 aria-label="Search"
                             />
-                            <input class="btn btn-secondary btn-lg" type="submit" value="Search" />
+                            <input class="btn btn-secondary me-2" type="submit" value="Search" />
+                            <a
+                                type="button"
+                                class="btn btn-secondary position-relative me-2 search-bar-image"
+                                href="user-profile.html"
+                            >
+                                <img src="../pages/assets/images/avatar.png" alt="" />
+                            </a>
+                            <a
+                                type="button"
+                                class="btn btn-secondary position-relative search-bar-image"
+                                href="cart.html"
+                            >
+                                <img src="../pages/assets/images/shopping-cart.png" alt="" />
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none d-sm-block"
+                                >
+                                    99+
+                                    <span class="visually-hidden">Item Count</span>
+                                </span>
+                            </a>
                         </form>
                     </div>
                 </div>
