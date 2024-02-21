@@ -240,6 +240,15 @@ label.form-check-label:focus,
     object-fit: cover;
 }
 
+html {
+    overflow-y: scroll;
+}
+
+/* body.modal-open {
+    padding-right: 0 !important;
+    overflow-y: scroll !important;
+} */
+
 /* local styles - product page */
 
 .card-categories {
