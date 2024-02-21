@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Product Page</title>
+        <title>Admin Order Dashboard</title>
+        <link rel="shortcut icon" href="../pages/assets/images/leaf.png" type="image/x-icon">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -94,29 +95,23 @@
                             <input
                                 class="form-control me-2"
                                 type="search"
-                                placeholder="Search"
+                                placeholder="Search Orders"
                                 aria-label="Search"
                             />
                             <input class="btn btn-secondary me-2" type="submit" value="Search" />
                             <a
                                 type="button"
-                                class="btn btn-secondary position-relative me-2 search-bar-image"
-                                href="user-profile.html"
+                                class="btn btn-tertiary position-relative me-2 search-bar-image"
+                                href="../pages/admin-order-dashboard.html"
                             >
-                                <img src="../pages/assets/images/avatar.png" alt="" />
+                                <img src="../pages/assets/images/order.png" alt="" />
                             </a>
                             <a
                                 type="button"
                                 class="btn btn-secondary position-relative search-bar-image"
-                                href="cart.html"
+                                href="../pages/admin-product-dashboard.html"
                             >
-                                <img src="../pages/assets/images/shopping-cart.png" alt="" />
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none d-sm-block"
-                                >
-                                    99+
-                                    <span class="visually-hidden">Item Count</span>
-                                </span>
+                                <img src="../pages/assets/images/package.png" alt="" />
                             </a>
                         </form>
                     </div>
@@ -135,14 +130,8 @@
                 <div class="col">
                     <button
                         type="button"
-                        class="btn btn-secondary position-relative card-categories"
-                        style="
-                            background-image: linear-gradient(
-                                    rgba(0, 0, 0, 0.5),
-                                    rgba(0, 0, 0, 0.5)
-                                ),
-                                url('../pages/assets/images/all-orders.jpg');
-                        "
+                        class="btn btn-secondary position-relative card-categories active"
+                        id="all-orders"
                     >
                         All Orders
                         <span
@@ -157,13 +146,7 @@
                     <button
                         type="button"
                         class="btn btn-secondary position-relative card-categories"
-                        style="
-                            background-image: linear-gradient(
-                                    rgba(0, 0, 0, 0.5),
-                                    rgba(0, 0, 0, 0.5)
-                                ),
-                                url('../pages/assets/images/processing.jpg');
-                        "
+                        id="pending-orders"
                     >
                         Pending Orders
                         <span
@@ -177,14 +160,8 @@
                 <div class="col">
                     <button
                         type="button"
-                        class="btn btn-secondary active position-relative card-categories"
-                        style="
-                            background-image: linear-gradient(
-                                    rgba(0, 0, 0, 0.5),
-                                    rgba(0, 0, 0, 0.5)
-                                ),
-                                url('../pages/assets/images/processing-1.jpg');
-                        "
+                        class="btn btn-secondary position-relative card-categories"
+                        id="on-process-orders"
                     >
                         On Process Orders
                         <span
@@ -199,13 +176,7 @@
                     <button
                         type="button"
                         class="btn btn-secondary position-relative card-categories"
-                        style="
-                            background-image: linear-gradient(
-                                    rgba(0, 0, 0, 0.5),
-                                    rgba(0, 0, 0, 0.5)
-                                ),
-                                url('../pages/assets/images/shipped.jpeg');
-                        "
+                        id="shipped-orders"
                     >
                         Shipped Orders
                         <span
@@ -220,13 +191,7 @@
                     <button
                         type="button"
                         class="btn btn-secondary position-relative card-categories"
-                        style="
-                            background-image: linear-gradient(
-                                    rgba(0, 0, 0, 0.5),
-                                    rgba(0, 0, 0, 0.5)
-                                ),
-                                url('../pages/assets/images/orders.jpg');
-                        "
+                        id="delivered-orders"
                     >
                         Delivered Orders
                         <span

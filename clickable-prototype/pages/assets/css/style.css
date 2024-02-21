@@ -240,6 +240,15 @@ label.form-check-label:focus,
     object-fit: cover;
 }
 
+html {
+    overflow-y: scroll;
+}
+
+/* body.modal-open {
+    padding-right: 0 !important;
+    overflow-y: scroll !important;
+} */
+
 /* local styles - product page */
 
 .card-categories {
@@ -311,4 +320,29 @@ label.form-check-label:focus,
 
 .address {
     font-size: 0.8em;
+}
+
+#all-orders {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/all-orders.jpg");
+}
+
+#pending-orders {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/processing.jpg");
+}
+
+#on-process-orders {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/processing-1.jpg");
+}
+
+#shipped-orders {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/shipped.jpeg");
+}
+
+#delivered-orders {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/orders.jpg");
 }
