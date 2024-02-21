@@ -27,7 +27,7 @@
             $(document).ready(function () {
                 // Hide header on scroll down
                 $(window).scroll(function () {
-                    if ($(this).scrollTop() > 1) {
+                    if ($(this).scrollTop() > 100) {
                         $("#header").addClass("d-none");
                         $("#search-bar-brand").addClass("d-sm-block");
                         $("#search-bar").addClass("pt-3");
@@ -131,14 +131,13 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <a href="product-page.html" class="btn btn-primary mt-3"
-                        >Back to Product Page</a
-                    >
-                </div>
-            </div>
+        <div class="container mt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="product-page.html">Home Page</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                </ol>
+            </nav>
         </div>
         <div class="container mt-3">
             <div class="row g-3">
