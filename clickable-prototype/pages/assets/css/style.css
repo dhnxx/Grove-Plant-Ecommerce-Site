@@ -249,6 +249,10 @@ html {
     overflow-y: scroll !important;
 } */
 
+#categories-container {
+    max-height: 650px;
+    width: 100%;
+}
 /* local styles - product page */
 
 .card-categories {
