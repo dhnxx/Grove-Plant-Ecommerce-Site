@@ -3,6 +3,8 @@ This repository contains the source code for an e-commerce website built with PH
 
 ## Entity Relationship Diagram (ERD)
 
+![ERD Diagram](erd/erd-v1.png)
+
 ## Video Demonstration
 
 ## Author/s
