@@ -287,16 +287,13 @@ html {
 
 /* local styles - specific item page */
 
+
 .main-image {
     height: 480px;
     width: 100%;
     object-fit: cover;
 }
 
-.specific-item-container {
-    max-height: 675px;
-    object-fit: cover;
-}
 
 .specific-item-container .description {
     max-height: 320px;
