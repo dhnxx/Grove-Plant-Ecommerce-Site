@@ -18,6 +18,17 @@
         "codes\\readme.rst": true,
         "LICENSE": true,
         "README.md": true,
-        "codes\\application\\controllers\\index.html": true
+        "codes\\application\\controllers\\index.html": true,
+        "codes\\application\\config\\constants.php": true,
+        "codes\\application\\config\\doctypes.php": true,
+        "codes\\application\\config\\foreign_chars.php": true,
+        "codes\\application\\config\\hooks.php": true,
+        "codes\\application\\config\\index.html": true,
+        "codes\\application\\config\\memcached.php": true,
+        "codes\\application\\config\\migration.php": true,
+        "codes\\application\\config\\mimes.php": true,
+        "codes\\application\\config\\profiler.php": true,
+        "codes\\application\\config\\smileys.php": true,
+        "codes\\application\\config\\user_agents.php": true
     }
 }
