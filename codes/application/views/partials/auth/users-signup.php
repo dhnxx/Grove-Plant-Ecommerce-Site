@@ -1,6 +1,5 @@
-<form>
+<?= form_open('UsersAuth/validate_signup', 'novalidate'); ?>
     <h2>Register</h2>
-
     <div class="form-group row mt-3">
         <div class="col">
             <label for="firstName">First Name:</label>
@@ -40,4 +39,4 @@
             value="Submit"
         />
     </div>
-</form>
+<?= form_close(); ?>

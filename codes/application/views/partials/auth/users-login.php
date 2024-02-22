@@ -1,6 +1,6 @@
-<form novalidate>
+<?= form_open('UsersAuth/validate_login', 'novalidate'); ?>
     <h2>Login</h2>
-    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?= $this->security->get_csrf_hash() ?>">
+    <input type="hidden" name="<?= $this->security->get_csrf_token_name() ?>" value="<?=$this->security->get_csrf_hash() ?>">
     <div class="form-group mt-3">
         <label for="email">Email address:</label>
         <input type="email" class="form-control <?php if (isset($errors['email']) && !empty($errors['email'])) { echo "is-invalid"; } ?>" id="email" name="email"/>
@@ -18,4 +18,4 @@
             value="Submit"
         />
     </div>
-</form>
+<?= form_close(); ?>
