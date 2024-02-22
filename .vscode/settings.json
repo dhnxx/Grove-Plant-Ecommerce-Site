@@ -1,0 +1,23 @@
+{
+    "files.exclude": {
+        "codes\\application\\cache": false,
+        "codes\\application\\core": false,
+        "codes\\application\\helpers": false,
+        "codes\\application\\hooks": false,
+        "codes\\application\\language": false,
+        "codes\\application\\libraries": false,
+        "codes\\application\\logs": false,
+        "codes\\application\\third_party": false,
+        "codes\\system": false,
+        "codes\\.editorconfig": false,
+        "codes\\.gitignore": false,
+        "codes\\.htaccess": false,
+        "codes\\composer.json": false,
+        "codes\\index.php": false,
+        "codes\\license.txt": false,
+        "codes\\readme.rst": false,
+        "LICENSE": false,
+        "README.md": false,
+        "codes\\application\\controllers\\index.html": false
+    }
+}
