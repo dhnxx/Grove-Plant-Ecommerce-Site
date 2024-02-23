@@ -121,7 +121,7 @@
             </div>
             <div class="row g-5 gy-3">
 <?php foreach ($similar_products as $product) { ?>
-                <div class="col-6 col-md-4 col-lg-3">
+                <a href="<?= base_url("product/view/" . $product["id"]) ?>" class="col-6 col-md-4 col-lg-3 text-decoration-none text-dark">
                     <div class="card card-products hover-effect">
                         <img
                             src="https://www.flowerpower.com.au/wordpress/wp-content/uploads/2023/01/fibreclay-ashton-pots.jpg"
@@ -152,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 <?php } ?>
             </div>
             <div class="row my-3">
