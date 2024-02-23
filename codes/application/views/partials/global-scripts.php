@@ -1,4 +1,4 @@
-        <link rel="shortcut icon" href="../pages/assets/images/leaf.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="<?= base_url("../assets/images/leaf.png")?>" type="image/x-icon" />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -16,4 +16,4 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <link rel="stylesheet" href="<?php base_url("") ?>" />
+        <link rel="stylesheet" href="<?= base_url("../assets/css/global/style.css")?>" />

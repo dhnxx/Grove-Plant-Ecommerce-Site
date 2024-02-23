@@ -1,29 +1,29 @@
 .card-categories {
-    width: 150px;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+	width: 150px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 
 .card-categories span {
-    font-size: 0.9em;
+	font-size: 0.9em;
 }
 
 .card-categories img {
-    width: 50px;
-    height: 50px;
+	width: 50px;
+	height: 50px;
 }
 
-.card-product {
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
+.card-products {
+	min-height: 350px;
+	width: 100%;
+	object-fit: cover;
 }
 
 .card-product img {
-    background-color: #e4572e;
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
+	background-color: #e4572e;
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
 }
