@@ -38,7 +38,7 @@ class UsersAuth extends CI_Controller {
 				$this->load->view('partials/auth/users-login', $data);
 			} else {
 				$this->session->set_userdata('user', $login_data['user']);
-				// redirect('/dashboard');
+				redirect(base_url("products"));
 			}
 		}
 	}
@@ -56,7 +56,7 @@ class UsersAuth extends CI_Controller {
 				$this->load->view('partials/auth/users-signup', $data);
 			} else {
 				$this->session->set_userdata('user', $signup_data['user']);
-				// redirect('/dashboard');
+				redirect(base_url("products"));
 			}
 		}
 	}

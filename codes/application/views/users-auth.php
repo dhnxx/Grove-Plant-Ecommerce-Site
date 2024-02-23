@@ -1,15 +1,11 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
-?>
-
-
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login</title>
-    <!-- Load Global Scripts --> 
+    <!-- Load Global Scripts (CDN/BS) --> 
     <?php $this->load->view('partials/global-scripts'); ?>
     <!-- Load Auth Scripts -->
     <script src=<?= base_url("assets/scripts/local/auth/auth.js") ?>></script>
