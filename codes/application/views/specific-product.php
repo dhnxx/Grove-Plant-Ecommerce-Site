@@ -138,15 +138,16 @@
                             <div class="row">
                                 <div class="col-auto">
                                     <div class="d-inline-block">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
+<?php for ($i = 0; $i < $product['avg_rating']; $i++) { ?>
+                            <span class="fa fa-star checked"></span>
+<?php } ?>
+<?php for ($i = $product['avg_rating']; $i < 5; $i++) { ?>
+                            <span class="fa fa-star "></span>
+<?php } ?>
                                     </div>
                                 </div>
                                 <div class="col-auto ms-0 ms-xl-auto">
-                                    <p>85 Ratings</p>
+                                    <p><?= !$product['review_count'] ? "No Reviews yet": $product['review_count'] . " review/s" ?> </p>
                                 </div>
                             </div>
                         </div>
