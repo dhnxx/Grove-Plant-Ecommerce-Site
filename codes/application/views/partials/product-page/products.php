@@ -1,5 +1,5 @@
 <?php foreach($products as $product) { ?>
-<div class="col-6 col-md-6 col-lg-4">
+<a href="<?= base_url("products/" . $product["id"]) ?>" class="text-decoration-none text-dark col-6 col-md-6 col-lg-4">
     <div class="card card-products hover-effect">
         <img
             src="https://www.flowerpower.com.au/wordpress/wp-content/uploads/2023/01/fibreclay-ashton-pots.jpg"
@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-</div>
+</a>
 <?php } ?>
 <div class="container">
     <div class="row">
