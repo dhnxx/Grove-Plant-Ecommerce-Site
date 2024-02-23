@@ -64,6 +64,31 @@ class ProductPage extends CI_Model {
         return $this->db->query($query, $value)->row_array();
     }
 
+    public function get_products_by_search($search, $page) {
+        $this->single_xss_clean($page);
+        $this->single_xss_clean($search);
+
+        $offset = ($page - 1) * 6;
+
+        $query = "SELECT products.*, ROUND(AVG(product_reviews.rating)) AS avg_rating, COUNT(product_reviews.id) AS review_count 
+        FROM products 
+        LEFT JOIN product_reviews ON products.id = product_reviews.product_id
+        WHERE name LIKE ? 
+        GROUP BY products.id
+        LIMIT 6 OFFSET ?;";
+        $value = array("%" . $search . "%", $offset);
+        return $this->db->query($query, $value)->result_array();
+    }
+
+    public function get_products_by_search_count($search) {
+        $this->single_xss_clean($search);
+
+        $query = "SELECT COUNT(id) AS count FROM products WHERE name LIKE ?";
+        $value = array("%" . $search . "%");
+        $count = $this->db->query($query, $value)->row_array();
+        return ceil($count['count'] / 6);
+    }
+
     private function xss_clean($post) {
         foreach ($post as $key => $value) {
             $post[$key] = $this->security->xss_clean($value);
