@@ -40,4 +40,13 @@ class ProductsPage extends CI_Controller
 
         $this->load->view('partials/product-page/products', $data);
     }
+
+    public function index_search($value) {
+
+        //* Get products by search and page count
+        $data["products"] = $this->productpage->get_products_by_search($value, 1);
+        $data["count"] = $this->productpage->get_products_by_search_count($value);
+
+        $this->load->view('partials/product-page/products', $data);
+    }
 }

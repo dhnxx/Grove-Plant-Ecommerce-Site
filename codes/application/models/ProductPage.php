@@ -16,8 +16,13 @@ class ProductPage extends CI_Model {
     public function get_all_products($page) {
         $this->single_xss_clean($page);
         $offset = ($page - 1) * 6;
-        $query = "SELECT * FROM products LIMIT 6 OFFSET $offset";
-        return $this->db->query($query)->result_array();
+        $query = "SELECT products.*, ROUND(AVG(product_reviews.rating)) AS avg_rating, COUNT(product_reviews.id) AS review_count 
+        FROM products 
+        LEFT JOIN product_reviews ON products.id = product_reviews.product_id 
+        GROUP BY products.id
+        LIMIT 6 OFFSET ?";
+        $value = array($offset);
+        return $this->db->query($query, $value)->result_array();
     }
 
     public function get_all_products_count() {
@@ -32,7 +37,12 @@ class ProductPage extends CI_Model {
 
         $offset = ($page - 1) * 6;
 
-        $query = "SELECT * FROM products WHERE category_id = ? LIMIT 6 OFFSET ?";
+        $query = "SELECT products.*, ROUND(AVG(product_reviews.rating)) AS avg_rating, COUNT(product_reviews.id) AS review_count 
+        FROM products 
+        LEFT JOIN product_reviews ON products.id = product_reviews.product_id
+        WHERE category_id = ? 
+        GROUP BY products.id
+        LIMIT 6 OFFSET ?;";
         $value = array($category_id, $offset); 
         return $this->db->query($query, $value)->result_array();
     }
@@ -52,6 +62,31 @@ class ProductPage extends CI_Model {
         $query = "SELECT id FROM categories WHERE name = ?";
         $value = array($category);
         return $this->db->query($query, $value)->row_array();
+    }
+
+    public function get_products_by_search($search, $page) {
+        $this->single_xss_clean($page);
+        $this->single_xss_clean($search);
+
+        $offset = ($page - 1) * 6;
+
+        $query = "SELECT products.*, ROUND(AVG(product_reviews.rating)) AS avg_rating, COUNT(product_reviews.id) AS review_count 
+        FROM products 
+        LEFT JOIN product_reviews ON products.id = product_reviews.product_id
+        WHERE name LIKE ? 
+        GROUP BY products.id
+        LIMIT 6 OFFSET ?;";
+        $value = array("%" . $search . "%", $offset);
+        return $this->db->query($query, $value)->result_array();
+    }
+
+    public function get_products_by_search_count($search) {
+        $this->single_xss_clean($search);
+
+        $query = "SELECT COUNT(id) AS count FROM products WHERE name LIKE ?";
+        $value = array("%" . $search . "%");
+        $count = $this->db->query($query, $value)->row_array();
+        return ceil($count['count'] / 6);
     }
 
     private function xss_clean($post) {

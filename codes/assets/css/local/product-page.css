@@ -1,6 +1,6 @@
 .card-categories {
 	width: 150px;
-	height: 80px;
+	min-height: 100px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -15,15 +15,3 @@
 	height: 50px;
 }
 
-.card-products {
-	min-height: 350px;
-	width: 100%;
-	object-fit: cover;
-}
-
-.card-product img {
-	background-color: #e4572e;
-	height: 200px;
-	width: 100%;
-	object-fit: cover;
-}
