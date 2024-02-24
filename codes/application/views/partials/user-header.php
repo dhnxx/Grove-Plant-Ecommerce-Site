@@ -22,7 +22,7 @@
         </div>
         <div class="row pb-3">
             <div class="col-12">
-                <form action="<?= base_url("product/search")?>" method="get" class="d-flex align-items-center" id="search-bar">
+                <form action="<?= base_url("products")?>" method="get" class="d-flex align-items-center" id="search-bar">
                     <img
                         src="<?= base_url('assets/images/leaf.png') ?>"
                         alt=""
