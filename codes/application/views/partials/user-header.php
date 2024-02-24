@@ -53,7 +53,7 @@
                         <span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none d-sm-block"
                         >
-                            99+
+<?= isset($_SESSION['cart']) ? ($_SESSION['cart']['count']) : "0" ?>
                             <span class="visually-hidden">Item Count</span>
                         </span>
                     </a>

@@ -7,6 +7,7 @@ class UsersAuth extends CI_Controller {
 		parent::__construct();
 		// $this->output->enable_profiler(TRUE);
 		$this->load->model('UserAuth');
+		$this->load->model('cart');
 	}
 
 	public function index() {
@@ -38,7 +39,10 @@ class UsersAuth extends CI_Controller {
 				$this->load->view('partials/auth/users-login', $data);
 			} else {
 				$this->session->set_userdata('user', $login_data['user']);
-				redirect(base_url("products"));
+				//* Cart session 
+				$cart = $this->cart->get_cart_count($login_data['user']['id']);
+				$this->session->set_userdata('cart', $cart);
+				echo "success";
 			}
 		}
 	}
@@ -55,8 +59,14 @@ class UsersAuth extends CI_Controller {
 				$data = array('errors' => $signup_data['errors']);
 				$this->load->view('partials/auth/users-signup', $data);
 			} else {
+				//* Log the user in
 				$this->session->set_userdata('user', $signup_data['user']);
-				redirect(base_url("products"));
+				//* Create cart for the user
+				$this->cart->create_cart($signup_data['user']['id']);
+				//* Cart session 
+				$cart = $this->cart->get_cart_count($signup_data['user']['id']);
+				$this->session->set_userdata('cart', $cart);
+				echo "success";
 			}
 		}
 	}

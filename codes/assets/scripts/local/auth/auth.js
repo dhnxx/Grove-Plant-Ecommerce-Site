@@ -36,8 +36,12 @@ $(document).ready(function () {
 			"/usersauth/validate_" + currentForm,
 			$(this).serialize(),
 			function (data) {
-				console.log(data);
-				$("#auth-form").html(data);
+				if (data !== "success") {
+					$("#auth-form").html(data);
+				} else {
+					//* Redirect to products page if login is successful
+					window.location.href = "/products";
+				}
 			}
 		);
 	});
