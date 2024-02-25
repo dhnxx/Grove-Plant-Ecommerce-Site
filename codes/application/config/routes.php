@@ -57,5 +57,7 @@ $route['search/(:any)/(:num)'] = 'ProductsPage/index_search/$1/$2';
 $route['product/view/(:num)'] = 'SpecificProducts/index/$1';
 $route['product/search/(:any)'] = 'ProductsPage/index_search/$1';
 $route['cart'] = 'Carts';
+$route['admin/dashboard/orders'] = 'OrdersDashboard';
+$route['admin/dashboard/products'] = 'ProductsDashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -36,11 +36,19 @@ $(document).ready(function () {
 			"/usersauth/validate_" + currentForm,
 			$(this).serialize(),
 			function (data) {
-				if (data !== "success") {
+				console.log(data);
+				if (!data) {
 					$("#auth-form").html(data);
-				} else {
+				}
+
+				if (data == "user") {
 					//* Redirect to products page if login is successful
 					window.location.href = "/products";
+				} else if (data == "admin") {
+					//* Redirect to admin page if login is successful
+					window.location.href = "/admin/dashboard/orders";
+				} else {
+					$("#auth-form").html(data);
 				}
 			}
 		);

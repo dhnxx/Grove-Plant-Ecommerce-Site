@@ -42,7 +42,11 @@ class UsersAuth extends CI_Controller {
 				//* Cart session 
 				$cart = $this->cart->get_cart_count($login_data['user']['id']);
 				$this->session->set_userdata('cart', $cart);
-				echo "success";
+				if ($login_data['user']['user_level'] === '9') {
+					echo "admin"; // Redirect to admin dashboard
+				} else {
+					echo "user"; // Redirect to user dashboard
+				}
 			}
 		}
 	}

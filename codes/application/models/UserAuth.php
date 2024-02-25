@@ -69,8 +69,9 @@ class UserAuth extends CI_Model {
         $this->xss_clean($user);
 
         //* Signup Query
-        $query = "INSERT INTO users (first_name, last_name, email, contact_number, password, created_at, updated_at) VALUES (?, ?, ?, ?, ?, NOW(), NOW())";
-        $value = array($user['first_name'], $user['last_name'], $user['email'], $user['contact_number'], md5($user['password']));
+        $query = "INSERT INTO users (first_name, last_name, email, contact_number, password, user_level, created_at, updated_at) VALUES (?, ?, ?, ?, ?, NOW(), NOW())";
+        
+        $value = array($user['first_name'], $user['last_name'], $user['email'], $user['contact_number'], md5($user['password']), 1);
         $this->db->query($query, $value);
 
         //* Get User

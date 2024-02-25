@@ -1,34 +1,52 @@
-.order-container img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
+#all-orders {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../../images/all-orders.jpg");
+}
+
+#pending-orders {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../../images/processing.jpg");
+}
+
+#on-process-orders {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../../images/processing-1.jpg");
+}
+
+#shipped-orders {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../../images/shipped.jpeg");
+}
+
+#delivered-orders {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../../images/orders.jpg");
+}
+
+.card-categories {
+	width: 150px;
+	min-height: 100px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.card-categories span {
+	font-size: 0.9em;
+}
+
+.card-categories img {
+	width: 50px;
+	height: 50px;
 }
 
 .address {
     font-size: 0.8em;
 }
 
-#all-orders {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/all-orders.jpg");
+.current-status {
+	min-width: 120px;
+	font-size: 0.8em;
 }
 
-#pending-orders {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/processing.jpg");
-}
 
-#on-process-orders {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/processing-1.jpg");
-}
-
-#shipped-orders {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/shipped.jpeg");
-}
-
-#delivered-orders {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/orders.jpg");
-}
