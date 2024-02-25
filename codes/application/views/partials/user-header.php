@@ -1,4 +1,4 @@
-<header class="navbar-dark main-color sticky-top">
+
     <div class="container">
         <div
             class="row py-3 d-flex align-items-center text-center text-md-start"
@@ -47,13 +47,13 @@
                     <a
                         type="button"
                         class="btn btn-secondary position-relative search-bar-image"
-                        href="cart.html"
+                        href="<?= base_url('cart') ?>"
                     >
                         <img src="<?= base_url('assets/images/shopping-cart.png') ?>" alt="" />
                         <span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none d-sm-block"
                         >
-                            99+
+<?= isset($_SESSION['cart']) ? ($_SESSION['cart']['count']) : "0" ?>
                             <span class="visually-hidden">Item Count</span>
                         </span>
                     </a>
@@ -61,4 +61,3 @@
             </div>
         </div>
     </div>
-</header>

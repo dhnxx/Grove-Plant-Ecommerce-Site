@@ -1,18 +1,15 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class SpecificProducts extends CI_Controller
-{
-    public function __construct()
-    {
+class SpecificProducts extends CI_Controller {
+    public function __construct() {
         parent::__construct();
         $this->load->model('SpecificProduct');
         //! enable profiler
         $this->output->enable_profiler(FALSE);
     }
 
-    public function index($product_id)
-    {  
+    public function index($product_id) {  
         //* Redirect to products page if product_id is not numeric
         if (!is_numeric($product_id)) {
             redirect('products');

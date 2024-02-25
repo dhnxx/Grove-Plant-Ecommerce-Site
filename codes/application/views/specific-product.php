@@ -10,16 +10,18 @@
     <!-- Load Global Scripts (Header) -->
     <script src=<?= base_url("assets/scripts/global/script.js") ?> ></script>
     <!-- Load Specific Product Scripts -->
-    <script src=<?= base_url("assets/scripts/local/product-page/product-page.js") ?> ></script>
+    <script src=<?= base_url("assets/scripts/local/specific-product/specific-product.js") ?> ></script>
     <link rel="stylesheet" href="<?= base_url("assets/css/local/product-page.css")?>">
 </head>
 <body>
     <!-- Load User Header --> 
-    <?php $this->load->view('partials/user-header'); ?>
+    <header class="navbar-dark main-color sticky-top" id="header-container">
+        <?php $this->load->view('partials/user-header'); ?>
+    </header>
     <div class="container mt-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="product-page.html">Home Page</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url("products") ?>">Home Page</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Product Name</li>
                 </ol>
             </nav>
@@ -75,23 +77,27 @@
                             <?= $product['description'] ?>
                         </p>
                     </div>
-                    <div class="row">
+
+                    <form action="<?= base_url("carts/add_to_cart") ?>" method="post" class="row" id="add-to-cart" >
                         <div class="col-4">
                             <div class="row">
                                 <p>Quantity</p>
                             </div>
                             <div class="row">
                                 <div class="input-group mb-3">
-                                    <button class="btn btn-outline-primary" type="button">-</button>
+                                    <button class="btn btn-outline-primary" type="button" id="decrement">-</button>
+                                    <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">
                                     <input
                                         type="text"
                                         class="form-control text-center"
-                                        placeholder=""
-                                        aria-label=""
                                         aria-describedby="basic-addon1"
                                         value="1"
+                                        name="quantity"
+                                        id="quantity"
                                     />
-                                    <button class="btn btn-outline-primary" type="button">+</button>
+                                    <input type="hidden" id="price"name="price-val" value="<?= $product['price'] ?>">
+                                    <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+                                    <button class="btn btn-outline-primary" type="button" id="increment">+</button>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +117,7 @@
                                 <button class="btn btn-primary">Add to Cart</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="row my-3">
@@ -189,4 +195,17 @@
 <?php } ?>
             </div>
         </div>
+        <!-- Add to cart toast -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="add-to-cart-toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Added to Cart</strong>
+                    <small>Just now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Product has been added to cart
+                </div>
+            </div>
+        </div>    
 </body>

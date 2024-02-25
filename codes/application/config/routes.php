@@ -56,5 +56,6 @@ $route['products/(:num)/(:num)'] = 'ProductsPage/index_products/$1/$2';
 $route['search/(:any)/(:num)'] = 'ProductsPage/index_search/$1/$2';
 $route['product/view/(:num)'] = 'SpecificProducts/index/$1';
 $route['product/search/(:any)'] = 'ProductsPage/index_search/$1';
+$route['cart'] = 'Carts';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
