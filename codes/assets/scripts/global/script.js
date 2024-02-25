@@ -10,3 +10,4 @@ $(window).scroll(function () {
 		$("#search-bar").removeClass("pt-3");
 	}
 });
+

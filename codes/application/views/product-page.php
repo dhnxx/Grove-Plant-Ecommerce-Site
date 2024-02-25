@@ -15,7 +15,9 @@
 </head>
 <body>
     <!-- Load User Header --> 
-    <?php $this->load->view('partials/user-header'); ?>
+    <header class="navbar-dark main-color sticky-top">
+        <?php $this->load->view('partials/user-header'); ?>
+    </header>
         <div class="container">
             <div class="row">
                 <div class="container mt-3 col-12 col-md-3">

@@ -1,4 +1,4 @@
-<header class="navbar-dark main-color sticky-top">
+
     <div class="container">
         <div
             class="row py-3 d-flex align-items-center text-center text-md-start"
@@ -47,7 +47,7 @@
                     <a
                         type="button"
                         class="btn btn-secondary position-relative search-bar-image"
-                        href="cart.html"
+                        href="<?= base_url('cart') ?>"
                     >
                         <img src="<?= base_url('assets/images/shopping-cart.png') ?>" alt="" />
                         <span
@@ -61,4 +61,3 @@
             </div>
         </div>
     </div>
-</header>

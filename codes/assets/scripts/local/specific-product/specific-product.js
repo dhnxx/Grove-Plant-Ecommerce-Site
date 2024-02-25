@@ -30,12 +30,13 @@ $(document).ready(function () {
 		e.preventDefault();
 		e.stopPropagation();
 		$.post($(this).attr("action"), $(this).serialize(), function () {
-			//* Show bootstrap toast notification
+			//! Show bootstrap toast notification
 			
 			//* Refresh header
 			$.get("/carts/refresh_header", function (data) {
-				$(".header-container").html(data);
+				$("#header-container").html(data);
 			});
 		});
 	});
+
 });

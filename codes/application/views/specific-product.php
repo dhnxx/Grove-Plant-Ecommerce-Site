@@ -15,13 +15,13 @@
 </head>
 <body>
     <!-- Load User Header --> 
-    <div class="header-container">
+    <header class="navbar-dark main-color sticky-top" id="header-container">
         <?php $this->load->view('partials/user-header'); ?>
-    </div>
+    </header>
     <div class="container mt-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="product-page.html">Home Page</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url("products") ?>">Home Page</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Product Name</li>
                 </ol>
             </nav>
