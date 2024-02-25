@@ -44,7 +44,7 @@
                         <ul class="dropdown-menu">
 <?php foreach ($statuses as $status) { ?>
                             <li>
-                                <a class="dropdown-item status" href="admins/update_status/<?= $status . "/" . $order["id"] ?>" data-order-id="<?= $order["id"] ?>" data-status="<?= $status ?>"> <?= ucwords($status) ?></a>
+                                <a class="dropdown-item status" href="/OrdersDashboard/update_status/<?= $status . "/" . $order["id"] ?>" data-order-id="<?= $order["id"] ?>" data-status="<?= $status ?>"> <?= ucwords($status) ?></a>
                             </li>
 <?php } ?>
                         </ul>

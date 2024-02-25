@@ -38,7 +38,7 @@
                     id="search_text"
                 />
                 <input
-                    class="btn btn-secondary me-2"
+                    class="btn btn-secondary me-2 add_product"
                     type="submit"
                     value="Add Product"
                     id="search_button"
@@ -46,14 +46,14 @@
                 <a
                     type="button"
                     class="btn btn-secondary position-relative me-2 search-bar-image"
-                    href="../pages/admin-order-dashboard.html"
+                    href="<?= base_url('admin/dashboard/orders') ?>"
                 >
                     <img src="<?= base_url('assets/images/order.png') ?>" alt="" />
                 </a>
                 <a
                     type="button"
                     class="btn btn-secondary position-relative search-bar-image"
-                    href="../pages/admin-product-dashboard.html"
+                    href="<?= base_url('admin/dashboard/products') ?>"
                 >
                     <img src="<?= base_url('assets/images/package.png') ?>" alt="" />
                 </a>
